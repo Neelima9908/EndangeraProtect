@@ -1,0 +1,93 @@
+/* Home.css */
+
+.home-container {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-header {
+  width: 100%;
+  background-color: #2a9d8f;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.home-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.mission-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 20px;
+}
+
+.mission-content {
+  max-width: 500px;
+  text-align: center;
+}
+
+.mission-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #264653;
+}
+
+.mission-content a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #e76f51;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.mission-content a:hover {
+  background-color: #d64e33;
+}
+
+.mission-image {
+  max-width: 500px;
+  text-align: center;
+}
+
+.mission-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mission-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mission-content,
+  .mission-image {
+    max-width: 90%;
+  }
+}
+body {
+  background-image: url('/public/assets/forest.jpg');
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+}

@@ -1,0 +1,150 @@
+/* Global styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f9f9f9; /* Light background color for a softer feel */
+  color: #444; /* Slightly lighter dark text color for better readability */
+}
+
+/* Navigation */
+nav {
+  background-color: #2d2d2d; /* Darker background for elegance */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Adds a more prominent shadow for depth */
+  border-bottom: 2px solid #444; /* Adds a bottom border to define the navbar */
+  position: sticky; /* Sticks the navbar at the top when scrolling */
+  top: 0;
+  z-index: 1000; /* Ensures the navbar stays on top */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 15px 30px;
+  margin: 0;
+}
+
+nav ul li {
+  margin-right: 35px; /* Slightly increased margin for a cleaner look */
+  position: relative;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  color: #25b55daf; /* Lighter text for better contrast */
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600; /* Slightly heavier font weight for better emphasis */
+  transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.2s ease; /* Smooth transition effects */
+}
+
+nav ul li a:hover {
+  color: #ff9a00; /* Elegant warm golden color on hover */
+  transform: translateY(-3px); /* Slightly increased lift effect for more elegance */
+  letter-spacing: 1px; /* Adds a slight letter spacing for better visual impact */
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff9a00;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1); /* Underline effect with smooth transition */
+}
+
+/* Adding a hamburger menu for mobile */
+nav .hamburger {
+  display: none; /* Initially hidden */
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+nav .hamburger div {
+  width: 30px;
+  height: 4px;
+  background-color: #e0e0e0;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #2d2d2d; /* Dark background for footer consistency */
+  color: #e0e0e0;
+  font-size: 17px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow on top for elegance */
+  border-top: 2px solid #444; /* Defines the footer boundary */
+}
+
+footer a {
+  color: #ff9a00; /* Elegant golden color for footer links */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #f2a900; /* Slightly different golden shade on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    display: none; /* Hide the navigation items by default */
+  }
+ 
+  nav ul.show {
+    display: flex; /* Show navigation items when the menu is active */
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  nav .hamburger {
+    display: block; /* Show hamburger menu on mobile */
+  }
+
+  footer {
+    padding: 40px 20px;
+    font-size: 15px;
+  }
+}
+
+/* Smooth transition for the mobile menu */
+nav ul.show {
+  transition: max-height 0.3s ease-in;
+}
+
+nav .hamburger.active div:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+nav .hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+nav .hamburger.active div:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}

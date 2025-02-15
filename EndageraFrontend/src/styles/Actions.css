@@ -1,0 +1,74 @@
+.actions-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.actions-content {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.actions-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.action-item {
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.message {
+  color: #007BFF;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.add-action-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-button {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #218838;
+}
+
+.image-container {
+  flex: 0 0 250px; /* Adjust width of the image container */
+  text-align: center;
+}
+
+.sidebar-image {
+  width: 100%;
+  max-width: 250px; /* Ensure the image doesn't overflow */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
